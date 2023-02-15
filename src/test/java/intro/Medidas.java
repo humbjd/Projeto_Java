@@ -21,9 +21,12 @@ public class Medidas {
 
         System.out.println("M E N U - D E - O P Ç Õ E S");
         System.out.println("c - CALCULAR MODO COMPACTO");
+        System.out.println("d - CONTAGEM CRESCENTE DE ZERO ATE DEZ");
         System.out.println("e - CALCULAR MODO EXTENSO");
         System.out.println("i - IF SIMPLES");
+        System.out.println("R - CONTAGEM REGRESSIVA DE DEZ ATE ZERO");
         System.out.println("DIGITE A OPÇÃO DESEJADA");
+
         String opcao = scanner.next();
 
 
@@ -32,18 +35,37 @@ public class Medidas {
        // String opcao = "ifSimples";
 
         switch (opcao){
-            case "i":
-                System.out.println("Você escolheu executar o método ifSimples");
-                ifSimples();
-                break;
+
             case "c":
+            case "C":
                 System.out.println("Você escolheu executar o método calcularAreaModoCompacto");
                 calcularAreaModoCompacto();
                 break;
+
+            case "d":
+            case "D":
+                System.out.println("Você escolheu executar o método contarAteDez");
+                contarAteDez();
+                break;
+
             case "e":
+            case "E":
                 System.out.println("Você escolheu executar o método calcularAreaModoExtenso");
                 calcularAreaModoExtenso();
                 break;
+
+            case "i":
+            case "I":
+                System.out.println("Você escolheu executar o método ifSimples");
+                ifSimples();
+                break;
+
+            case "r":
+            case "R":
+                System.out.println("Você escolheu executar o método contagemRegressiva");
+                contagemRegressiva();
+                break;
+
             default:
                 System.out.println("Você não escolheu nenhum dos metodos");
                 break;
@@ -93,5 +115,28 @@ public class Medidas {
                 + largura * comprimento + " m²");
 
     }
+    // Loops ou Repetições
+    // for = repetição incondicional
 
-}
+    public static void contarAteDez() {
+
+        // Contagem de 1 a 10 (Crescente)
+
+        System.out.println("Contagem Crescente");
+
+        for (int numero = 1; numero <= 10; numero++) {
+            System.out.println(numero);
+        }
+    }
+    public static void contagemRegressiva(){
+         // Contagem de 10 a 1 (Decrescente)
+        System.out.println("Contagem Decrescente");
+
+        for(int numero = 10; numero > -1; numero --){
+            System.out.println(numero);
+        }
+
+        }
+
+    }
+
