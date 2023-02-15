@@ -3,6 +3,9 @@ package intro;
 
 // 2 - Referência as bibliotecas
 
+import javax.print.DocFlavor;
+import java.util.Scanner;
+
 // 3 - Classe
 public class Medidas {
     // 3.1 - Atributos - Caracteristicas
@@ -11,20 +14,33 @@ public class Medidas {
     public static void main(String[] args){
         System.out.println("Cálculo de Areas");
         // Condicional = Verificar uma condição - Fazer uma pergunta para uma pessoa, um hardware ou software
+
+        // Utilizar a classe Scanner do Java para ler a escolha do usuário no console
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("M E N U - D E - O P Ç Õ E S");
+        System.out.println("c - CALCULAR MODO COMPACTO");
+        System.out.println("e - CALCULAR MODO EXTENSO");
+        System.out.println("i - IF SIMPLES");
+        System.out.println("DIGITE A OPÇÃO DESEJADA");
+        String opcao = scanner.next();
+
+
         // Switch = Selecionar o comportamento do programa conforma a escolha da pessoa ou software
 
-        String opcao = "ifSimples";
+       // String opcao = "ifSimples";
 
         switch (opcao){
-            case "ifSimples":
+            case "i":
                 System.out.println("Você escolheu executar o método ifSimples");
                 ifSimples();
                 break;
-            case "compacto":
+            case "c":
                 System.out.println("Você escolheu executar o método calcularAreaModoCompacto");
                 calcularAreaModoCompacto();
                 break;
-            case "extenso":
+            case "e":
                 System.out.println("Você escolheu executar o método calcularAreaModoExtenso");
                 calcularAreaModoExtenso();
                 break;
